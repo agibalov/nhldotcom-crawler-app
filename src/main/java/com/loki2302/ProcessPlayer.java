@@ -14,9 +14,9 @@ public class ProcessPlayer implements CrawlerTask {
 	}
 	
 	public void Execute(CrawlerContext crawlerContext) throws IOException {
-		Document doc = Jsoup.connect(url).get();
-    	Element nameElement = doc.select("#tombstone > div:eq(1) > h1 > div").first();        	
-    	String playerName = fixString(nameElement.ownText());
+		Document doc = Jsoup.connect(url).get();      	
+		Element nameElement = doc.select("#tombstone h1 *").first();
+    	String playerName = fixString(nameElement.ownText());    	
     	crawlerContext.addPlayerName(playerName);
 	}
 	
