@@ -18,7 +18,7 @@ public class ProcessLetter implements CrawlerTask {
 		this.processPagination = processPagination;
 	}
 	
-	public void Execute(CrawlerContext crawlerContext) throws IOException {
+	public void execute(CrawlerContext crawlerContext) throws IOException {
 		Document doc = Jsoup.connect(url).get();
     	Elements elements = doc.select("table.data > tbody > tr a[href*=player]");
     	for(Element e : elements) {

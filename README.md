@@ -8,9 +8,7 @@ Web-crawling hello world. What it does:
 3. Takes every player URL and retrieves player's name
 4. Prints retrieved player names
 
-Technically, it uses
-* [jsoup][] to retrieve web pages and extract required data
-* Java's standard `ThreadPoolExecutor` to process multiple tasks simultaneously
+Technically, it uses [jsoup][] to retrieve web pages and extract required data.
 
 [jsoup]: http://jsoup.org/
 

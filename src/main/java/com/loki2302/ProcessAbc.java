@@ -14,7 +14,7 @@ public class ProcessAbc implements CrawlerTask {
 		this.url = url;
 	}
 	
-	public void Execute(CrawlerContext crawlerContext) throws IOException {
+	public void execute(CrawlerContext crawlerContext) throws IOException {
 		Document doc = Jsoup.connect(url).get();
     	Elements elements = doc.select("#playerSearch > .lastInitial > a");
     	for(Element e : elements) {

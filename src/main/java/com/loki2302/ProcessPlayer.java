@@ -13,7 +13,7 @@ public class ProcessPlayer implements CrawlerTask {
 		this.url = url;
 	}
 	
-	public void Execute(CrawlerContext crawlerContext) throws IOException {
+	public void execute(CrawlerContext crawlerContext) throws IOException {
 		Document doc = Jsoup.connect(url).get();      	
 		Element nameElement = doc.select("#tombstone h1 *").first();
     	String playerName = fixString(nameElement.ownText());    	
